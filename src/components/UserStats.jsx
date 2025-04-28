@@ -38,25 +38,27 @@ const UserStats = ({ userData, username }) => {
     fetchStars();
   }, [username]);
   return (
-    <div className="flex flex-col items-start font-mono justify-center p-6 pt-8">
-      <p className="flex gap-2 items-center text-sm text-zinc-500">
-        <LuMapPin />
+    <div className="flex flex-col items-start font-mono justify-center p-2 md:p-6 pt-3 md:pt-8 text-xs md:text-sm">
+      <p className="flex gap-1 md:gap-2 items-center text-zinc-500">
+        <LuMapPin className="shrink-0" />
         <span className="text-amber-500">Location:</span>
         {userData.location && userData.location != "undefined" ? (
-          userData.location
+          <span className="truncate max-w-32 md:max-w-full">
+            {userData.location}
+          </span>
         ) : (
           <span className="text-red-500">
             <TbLocationBroken />
           </span>
         )}
       </p>
-      <p className="flex gap-2 items-center text-sm text-zinc-500">
-        <LuStar />
+      <p className="flex gap-1 md:gap-2 items-center text-zinc-500">
+        <LuStar className="shrink-0" />
         <span className="text-amber-500">Total Stars:</span>
         {stars}
       </p>
-      <p className="flex gap-2 items-center text-sm text-zinc-500">
-        <RiGitRepositoryLine />
+      <p className="flex gap-1 md:gap-2 items-center text-zinc-500">
+        <RiGitRepositoryLine className="shrink-0" />
         <span className="text-amber-500">Total Repos:</span>
         {userData.public_repos}
       </p>
@@ -65,103 +67,3 @@ const UserStats = ({ userData, username }) => {
 };
 
 export default UserStats;
-
-// avatar_url
-// :
-// "https://avatars.githubusercontent.com/u/107312993?v=4"
-// bio
-// :
-// null
-// blog
-// :
-// "zzzzshawn.cloud"
-// company
-// :
-// null
-// created_at
-// :
-// "2022-06-11T14:32:49Z"
-// email
-// :
-// null
-// events_url
-// :
-// "https://api.github.com/users/zzzzshawn/events{/privacy}"
-// followers
-// :
-// 83
-// followers_url
-// :
-// "https://api.github.com/users/zzzzshawn/followers"
-// following
-// :
-// 66
-// following_url
-// :
-// "https://api.github.com/users/zzzzshawn/following{/other_user}"
-// gists_url
-// :
-// "https://api.github.com/users/zzzzshawn/gists{/gist_id}"
-// gravatar_id
-// :
-// ""
-// hireable
-// :
-// true
-// html_url
-// :
-// "https://github.com/zzzzshawn"
-// id
-// :
-// 107312993
-// location
-// :
-// "Goa"
-// login
-// :
-// "zzzzshawn"
-// name
-// :
-// "Shawn."
-// node_id
-// :
-// "U_kgDOBmV3YQ"
-// organizations_url
-// :
-// "https://api.github.com/users/zzzzshawn/orgs"
-// public_gists
-// :
-// 1
-// public_repos
-// :
-// 41
-// received_events_url
-// :
-// "https://api.github.com/users/zzzzshawn/received_events"
-// repos_url
-// :
-// "https://api.github.com/users/zzzzshawn/repos"
-// site_admin
-// :
-// false
-// starred_url
-// :
-// "https://api.github.com/users/zzzzshawn/starred{/owner}{/repo}"
-// subscriptions_url
-// :
-// "https://api.github.com/users/zzzzshawn/subscriptions"
-// twitter_username
-// :
-// null
-// type
-// :
-// "User"
-// updated_at
-// :
-// "2025-04-20T14:46:36Z"
-// url
-// :
-// "https://api.github.com/users/zzzzshawn"
-// user_view_type
-// :
-// "public"
