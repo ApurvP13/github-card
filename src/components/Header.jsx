@@ -13,7 +13,7 @@ const Header = () => {
 
         <div className="flex gap-3 md:gap-4">
           <a
-            href="#"
+            href="https://x.com/astarcodes"
             target="_blank"
             className="text-orange-300 text-2xl md:text-3xl"
           >
