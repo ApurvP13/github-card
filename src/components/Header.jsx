@@ -13,15 +13,19 @@ const Header = () => {
 
         <div className="flex gap-3 md:gap-4">
           <a
-            href="https://x.com/astarcodes"
+            href="#"
             target="_blank"
             className="text-orange-300 text-2xl md:text-3xl"
           >
             <FaXTwitter />
           </a>
-          <span className="text-orange-300 text-2xl md:text-3xl">
+          <a
+            href="https://github.com/ApurvP13/github-card"
+            target="_blank"
+            className="text-orange-300 text-2xl md:text-3xl"
+          >
             <FaGithub />
-          </span>
+          </a>
         </div>
       </div>
     </div>
